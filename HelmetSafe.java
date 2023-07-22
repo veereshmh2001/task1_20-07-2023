@@ -4,11 +4,11 @@ class HelmetSafe{
 		
 		System.out.println("invoking main method in HelmetSafe");
 		
-		Helmet helmet=new Helmet("ISI","Full face",6,"black");
+		Helmet helmet=new Helmet("ISI","Full face");
 		Helmet.printStatic();
-		helmet.printInstance();
 		
 		
-		
+		Helmet helmet1=new Helmet(6,"black");
+		helmet1.printInstance();
 	}
 }

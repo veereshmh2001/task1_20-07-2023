@@ -5,15 +5,20 @@ class Helmet{
 	int noOfPieces;
 	String color;
 	
-	Helmet(String logo,String type, int noOfPieces,String color)
+	Helmet(String logo,String type)
 	{
-		System.out.println("invoking at argument in helmet"); 
+		System.out.println("invoking at static argument in helmet"); 
 		this.logo=logo;
 		this.type=type;
+		
+	}
+	
+	Helmet(int noOfPieces,String color)
+	{
+		System.out.println("invoking at Instance argument in helmet"); 
 		this.noOfPieces=noOfPieces;
 		this.color=color;
 	}
-	
 	
 	static{
 		logo="ISI";
