@@ -20,11 +20,6 @@ class Candle{
 		this.isScented=isScented;
 	}
 	
-	static{
-		color="Red";
-		height=7.5;
-		System.out.println("invoking at static in Candle"); 
-	}
 	
 	static void printStatic()
 	{
