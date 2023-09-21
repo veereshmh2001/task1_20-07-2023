@@ -8,6 +8,14 @@ public interface NewsPaperRepository {
 	
 	void save (NewsPaperDTO dto);
 	
+	default boolean isExist(NewsPaperDTO dto) {
+		return false;
+	}
+	
+	default NewsPaperDTO findbyPublisher(String name) {
+		return null;
+	}
+	
 	
 	
 

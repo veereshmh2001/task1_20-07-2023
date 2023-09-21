@@ -6,4 +6,8 @@ public interface NewsPaperService {
 	
 	boolean validateAndSave(NewsPaperDTO dto);
 
+	default NewsPaperDTO findbyPublisher(String name) {
+		return null;
+	}
+
 }

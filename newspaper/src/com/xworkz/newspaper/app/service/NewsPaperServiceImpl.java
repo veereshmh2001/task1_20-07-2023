@@ -47,4 +47,21 @@ public class NewsPaperServiceImpl implements NewsPaperService {
 		return false;
 	}
 
+	@Override
+	public NewsPaperDTO findbyPublisher(String name) {
+		
+		System.out.println("running in findby.....");
+		if(name!=null && !name.isEmpty() && name.length()>=2 && name.length()<20) {
+			System.out.println("publisher is valid, will find");
+			NewsPaperDTO dto = this.newsPaperRepository.findbyPublisher(name);
+			return dto;
+		} else {
+			System.err.println("publisher is invalid...");
+		}
+		return NewsPaperService.super.findbyPublisher(name);
+	}
+	
+	
+	
+
 }

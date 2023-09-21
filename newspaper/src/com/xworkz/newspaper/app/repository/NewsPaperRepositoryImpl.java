@@ -19,6 +19,36 @@ public class NewsPaperRepositoryImpl implements NewsPaperRepository {
 		}
 
 	}
+	
+	@Override
+	public boolean isExist(NewsPaperDTO dto) {
+		
+		System.out.println("running is exist in " + this.getClass().getSimpleName());
+		for(int index = 0; index<= this.position; index++) {
+			NewsPaperDTO ref = this.dtos[index];
+			if(ref!=null && ref.equals(dto)) {
+				System.out.println("dto already exist");
+				return true;
+			}
+		}
+		return NewsPaperRepository.super.isExist(dto);
+	}
+	
+	@Override
+	public NewsPaperDTO findbyPublisher(String name) {
+		
+		System.out.println("running findbyPublisher arg passed " + name);
+		System.out.println("current position " + this.position);
+		for(int index = 0; index< this.position; index++) {
+			NewsPaperDTO dto = this.dtos[index];
+			if(dto.getPublisher().equals(name)) {
+				System.out.println("dto found with publisher");
+				return dto;
+			}
+		}
+		System.err.println("No dto matched");
+		return NewsPaperRepository.super.findbyPublisher(name);
+	}
 
 }
 

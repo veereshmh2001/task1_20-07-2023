@@ -11,16 +11,35 @@ public class NewsPaperDTO implements Serializable {
 		private double cost;
 		private int pages;
 
-		public void name() {
-
+		public NewsPaperDTO() {
+			// TODO Auto-generated constructor stub
 		}
 
-		public void Newspaper(String name, String publisher, int cost, int pages) {
+		public  NewsPaperDTO(String name, String publisher, int cost, int pages) {
 			
 			this.name = name;
 			this.publisher = publisher;
 			this.cost = cost;
 			this.pages = pages;
+		}
+		
+		@Override
+		public boolean equals(Object obj) {
+			
+			System.out.println("running equals in NewsPaperDTO");
+			if(obj!=null)
+			{
+				if(obj instanceof NewsPaperDTO)
+				{
+					NewsPaperDTO casted=(NewsPaperDTO)obj;
+					if(this.publisher.equals(casted.publisher)&& this.name.equals(casted.name))
+					{
+						System.out.println("Instance are same");
+						return true;
+					}
+				}
+			}	
+		return false;
 		}
 		
 
@@ -61,6 +80,8 @@ public class NewsPaperDTO implements Serializable {
 		public void setPages(int pages) {
 			this.pages = pages;
 		}
+		
+		
 
 	}
 
