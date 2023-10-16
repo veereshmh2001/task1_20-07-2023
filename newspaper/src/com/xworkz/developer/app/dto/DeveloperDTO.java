@@ -3,16 +3,16 @@ package com.xworkz.developer.app.dto;
 import java.io.Serializable;
 
 public class DeveloperDTO implements Serializable {
-	
+
 	private String name;
 	private int experience;
 	private double salary;
 	private String workingFor;
 	private String designation;
 	private boolean difficult;
-	
+
 	public DeveloperDTO() {
-		
+
 	}
 
 	public DeveloperDTO(String name, int experience, double salary, String workingFor, String designation,
@@ -25,32 +25,26 @@ public class DeveloperDTO implements Serializable {
 		this.designation = designation;
 		this.difficult = difficult;
 	}
-	
-	
+
 	@Override
 	public boolean equals(Object obj) {
-		
-		if(obj!=null)
-		{
-			if(obj instanceof DeveloperDTO )
-			{
-				//casting
-				DeveloperDTO F=(DeveloperDTO)obj;
-				if(F.designation.equals(this.designation))
-				{
-					System.err.println("The designation name is already stored");//if it is same it will be true...
+
+		if (obj != null) {
+			if (obj instanceof DeveloperDTO) {
+				
+				DeveloperDTO F = (DeveloperDTO) obj;
+				if (F.designation.equals(this.designation)) {
+					System.err.println("The designation name is already stored");// if it is same it will be true...
 					return true;
-				}else {
-					System.out.println("It can Store it as desigation value is change");//it will be false
-					
+				} else {
+					System.out.println("It can Store it as desigation value is change");// it will be false
+
 				}
 			}
 		}
 		return false;
-		
+
 	}
-	
-	
 
 	public String getName() {
 		return name;
@@ -105,9 +99,5 @@ public class DeveloperDTO implements Serializable {
 		return "DeveloperDTO [name=" + name + ", experience=" + experience + ", salary=" + salary + ", workingFor="
 				+ workingFor + ", designation=" + designation + ", difficult=" + difficult + "]";
 	}
-	
-	
-	
-	
 
 }

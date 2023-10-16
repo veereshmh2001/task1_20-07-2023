@@ -16,6 +16,7 @@ public class DeveloperRunner {
 		DeveloperDTO ref3 = new DeveloperDTO("ram", 45, 60, "1234", "ram", true);
 		ref1.validateAndSave(ref2);
 		ref1.validateAndSave(ref3);
+		System.out.println(args.length);
 
 	}
 

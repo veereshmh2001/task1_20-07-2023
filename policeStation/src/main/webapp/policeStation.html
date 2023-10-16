@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>X-workz</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+.point{
+color:red;
+font-weight:bold;
+}
+</style>
+<body>
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        
+    </div>
+  </div>
+</nav>
+<h1>Digital Form for Police Station  Info....</h1>
+<form action="police">
+  
+  <div class="row g-3">
+  <label class="point" for="stationName">Station name</label>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Station name" aria-label="Station name" name="stationName">
+  </div>
+  
+  <div class="col">
+  <label class="point" for="location">Location</label>
+    <input type="text" class="form-control" placeholder="Location" aria-label="Location" name="location">
+  </div>
+</div>
+
+
+<div class="row g-3">
+<label class="point" for="inspectorName">Inspector name</label>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Inspector name" aria-label="Inspector name" name="inspectorName">
+  </div>
+  <div class="col">
+  <label class="point" for="assistantCommissioner">Assistant commissioner</label>
+    <input type="text" class="form-control" placeholder="Assistant commissioner" aria-label="Assistant commissioner" name="assistantCommissioner">
+  </div>
+</div>
+
+<div class="row g-3">
+<label class="point" for="headConstable">Head Constable</label>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Head Constable" aria-label="Head Constable" name="headConstable">
+  </div>
+  <div class="col">
+  <label class="point" for="numberOfCell">Number Of Cells</label>
+    <input type="text" class="form-control" placeholder="Number Of Cell" aria-label="Number Of Cell" name="numberOfCell">
+  </div>
+</div>
+<div class="row g-3">
+<label class="point" for="noOfCasesPending">Number of Cases Pending</label>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Number Of Case Pending" aria-label="Number Of Case Pending" name="numberOfCasePending">
+  </div>
+  </div>
+  </br>
+  
+<div class="col-md-2">
+<label class="form-label">Painted</label><br>
+<div class="col-16">
+<input type="radio" id="painted-checkbox" name="painted" value="true"> Yes <input type="radio" id="not-painted-checkbox" name="painted" value="false"> No
+</div>
+</div>  
+  
+  
+  
+  
+  </br>
+  <input type="submit" value="Save" class="btn btn-primary">
+  
+  
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

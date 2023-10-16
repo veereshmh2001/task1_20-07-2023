@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+</head>
+<style>
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:gray;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .form-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: black;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: green;
+  }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+
+<body>
+<div class="container">
+<h4>Player Form</h4>
+<form action="veeru">
+
+<div class="form-floating mb-3">
+<label for="floatingInput">Enter Player Name</label>
+<input type="text" class="form-control" id="floatingInput" name="name" placeholder="name">
+</div>
+
+<div class="mb-3">
+<label for="floatingInput">Sports</label>
+<select class="form-select" name="sports">
+<option selected>Choose sports</option>
+<option>Cricket</option>
+<option>Football</option>
+<option>Basketball</option>
+<option>Kabaddi</option>
+</select>
+</div>
+
+<div class="form-floating mb-3">
+<label for="place">Place</label>
+<input type="text" name="place" class="form-control" placeholder="place">
+
+</div>
+
+<div class="form-floating mb-3">
+<label for="experience">Experience</label>
+<input type="number" name="experience" class="form-control" placeholder="experience">
+
+</div>
+
+<input type="submit" value="Send" class="btn btn-primary">
+
+</form>
+</body>
+</html>
