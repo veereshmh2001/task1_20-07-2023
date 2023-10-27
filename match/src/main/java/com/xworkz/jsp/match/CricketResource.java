@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/win", loadOnStartup = 3)
-public class CricketResource extends HttpServlet{
-	
+public class CricketResource extends HttpServlet {
+
 	public CricketResource() {
 		System.out.println("Created Cricket Resource");
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String tournamentName = req.getParameter("tournamentName");
@@ -29,26 +29,23 @@ public class CricketResource extends HttpServlet{
 		String thirdUmpireName = req.getParameter("thirdUmpireName");
 		String stadiumName = req.getParameter("stadiumName");
 		String stadiumCapacity = req.getParameter("stadiumCapacity");
-		
-		int convertedStadiumCapacity= Integer.parseInt(stadiumCapacity);
-		
+
+
 		req.setAttribute("tournamentName", tournamentName);
-	    req.setAttribute("hostingCountry", hostingCountry);
-	    req.setAttribute("matchDate", matchDate);
-	    req.setAttribute("team1", team1);
-	    req.setAttribute("team2", team2);
-	    req.setAttribute("team1CaptainName", team1CaptainName);
-	    req.setAttribute("team2CaptainName", team2CaptainName);
-	    req.setAttribute("umpireName", umpireName);
-	    req.setAttribute("thirdUmpireName", thirdUmpireName);
-	    req.setAttribute("stadiumName", stadiumName);
-	    req.setAttribute("stadiumCapacity", stadiumCapacity);
-	    
-	    RequestDispatcher dispatcher = req.getRequestDispatcher("cricketWin.jsp");
-	       dispatcher.forward(req, resp);
-	    
-	    
-		
+		req.setAttribute("hostingCountry", hostingCountry);
+		req.setAttribute("matchDate", matchDate);
+		req.setAttribute("team1", team1);
+		req.setAttribute("team2", team2);
+		req.setAttribute("team1CaptainName", team1CaptainName);
+		req.setAttribute("team2CaptainName", team2CaptainName);
+		req.setAttribute("umpireName", umpireName);
+		req.setAttribute("thirdUmpireName", thirdUmpireName);
+		req.setAttribute("stadiumName", stadiumName);
+		req.setAttribute("stadiumCapacity", stadiumCapacity);
+
+		RequestDispatcher dispatcher = req.getRequestDispatcher("cricketWin.jsp");
+		dispatcher.forward(req, resp);
+
 	}
 
 }
