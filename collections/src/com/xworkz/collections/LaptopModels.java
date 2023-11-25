@@ -40,6 +40,24 @@ public class LaptopModels {
 		collection.add("Razer Blade Pro 17");
 		collection.add("MSI Creator 15");
 		collection.add("Lenovo");
+		collection.add("Acer Swift 3");
+		collection.add("Google Pixelbook Go");
+		collection.add("MSI Prestige 14");
+		collection.add("Razer Blade Pro 17");
+		collection.add("Alienware Area-51m");
+		collection.add("HP ZBook Fury");
+		collection.add("Lenovo Chromebook Duet");
+		collection.add("Acer Chromebook Spin 713");
+		collection.add("Dell G3 15");
+		collection.add("Asus ROG Zephyrus M16");
+		collection.add("Apple MacBook Air M2");
+		collection.add("Lenovo IdeaPad 3");
+		collection.add("Dell XPS 15");
+		collection.add("HP Pavilion x360");
+		collection.add("Acer Nitro 5");
+		collection.add("Lenovo ThinkPad X1 Yoga");
+		collection.add("Asus ZenBook 14");
+		collection.add("Razer Blade Stealth");
 		
 		System.out.println("Total Models : " + collection.size());
 		
