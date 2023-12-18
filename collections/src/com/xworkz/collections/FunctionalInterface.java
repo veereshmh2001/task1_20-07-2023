@@ -1,4 +1,5 @@
 package com.xworkz.collections;
+
 import java.util.function.BiConsumer;
 import java.util.function.BiPredicate;
 import java.util.function.BinaryOperator;
@@ -10,106 +11,102 @@ import java.util.function.DoubleFunction;
 import java.util.function.DoublePredicate;
 
 public class FunctionalInterface {
-	
-	
 
+	public static void main(String[] args) {
 
+		System.out.println("BiConsumer");
+		BiConsumer<String, String> cricket = (s1, s2) -> {
+			System.out.println("Name :" + s1);
+			System.out.println("Name :" + s2);
+		};
+		cricket.accept("M S Dhoni", "Yuvaraj Singh");
 
-		public static void main(String[] args) {
+		System.out.println("\nBiPredicate");
+		BiPredicate<String, String> guess = (a, b) -> {
 
-			System.out.println("BiConsumer");
-			BiConsumer<String, String> cricket = (s1, s2) -> {
-				System.out.println("Name :" + s1);
-				System.out.println("Name :" + s2);
-			};
-			cricket.accept("M S Dhoni", "Yuvaraj Singh");
+			if (a.equals("Win"))
+				System.out.println("India :" + a);
+			else
+				System.err.println("India :" + b);
+			return true;
+		};
 
-			System.out.println("\nBiPredicate");
-			BiPredicate<String, String> guess = (a, b) -> {
+		guess.test("Win", "Loose");
 
-				if (a.equals("Win"))
-					System.out.println("India :" + a);
-				else
-					System.err.println("India :" + b);
-				return true;
-			};
+		System.out.println("\nBooleanSupplier");
+		BooleanSupplier supply = () -> {
 
-			guess.test("Win", "Loose");
+			return false;
+		};
 
-			System.out.println("\nBooleanSupplier");
-			BooleanSupplier supply = () -> {
+		System.out.println(supply.getAsBoolean());
 
-				return false;
-			};
+		System.out.println("\nConsumer");
+		Consumer<Double> consumer = (d) -> {
+			if (d >= 25000.0d)
+				System.out.println(d + " Valid price");
+			else
+				System.err.println(d + " Invalid price");
 
-			System.out.println(supply.getAsBoolean());
+		};
 
-			System.out.println("\nConsumer");
-			Consumer<Double> consumer = (d) -> {
-				if (d >= 25000.0d)
-					System.out.println(d + " Valid price");
-				else
-					System.err.println(d + " Invalid price");
+		consumer.accept(26000.0d);
 
-			};
+		System.out.println("\nDoubleBinaryOperator");
+		DoubleBinaryOperator binaryOperator = (d1, d2) -> {
+			if (d1 == d2)
+				System.out.println("Original Price");
+			else
+				System.err.println("Duplicate Price");
+			return d1;
+		};
 
-			consumer.accept(26000.0d);
+		binaryOperator.applyAsDouble(2000.0, 3000.0);
 
-			System.out.println("\nDoubleBinaryOperator");
-			DoubleBinaryOperator binaryOperator = (d1, d2) -> {
-				if (d1 == d2)
-					System.out.println("Original Price");
-				else
-					System.err.println("Duplicate Price");
-				return d1;
-			};
+		System.out.println("\nDoubleConsumer");
+		DoubleConsumer doubleConsumer = (d) -> {
+			if (d >= 3000d)
+				System.out.println(d + " Valid amount");
+			else
+				System.out.println(d + " Invalid amount");
+		};
+		doubleConsumer.accept(3200d);
 
-			binaryOperator.applyAsDouble(2000.0, 3000.0);
+		System.out.println("\nDoubleFunction");
+		DoubleFunction<Double> doubleFunction = (d1) -> {
+			if (d1 != 0)
+				System.out.println(d1);
+			else
+				System.err.println("0");
+			return d1;
+		};
+		doubleFunction.apply(0);
 
-			System.out.println("\nDoubleConsumer");
-			DoubleConsumer doubleConsumer = (d) -> {
-				if (d >= 3000d)
-					System.out.println(d + " Valid amount");
-				else
-					System.out.println(d + " Invalid amount");
-			};
-			doubleConsumer.accept(3200d);
+		System.out.println("\nBinaryOperator");
+		BinaryOperator<Integer> valid = (i1, i2) -> {
 
-			System.out.println("\nDoubleFunction");
-			DoubleFunction<Double> doubleFunction = (d1) -> {
-				if (d1 != 0)
-					System.out.println(d1);
-				else
-					System.err.println("0");
-				return d1;
-			};
-			doubleFunction.apply(0);
+			if (i1.equals(i2))
+				System.out.println(i1);
+			else
+				throw new NullPointerException();
 
-			System.out.println("\nBinaryOperator");
-			BinaryOperator<Integer> valid = (i1, i2) -> {
+			return 0;
+		};
 
-				if (i1.equals(i2))
-					System.out.println(i1);
-				else
-					throw new NullPointerException();
+		valid.apply(2300, 2300);
 
-				return 0;
-			};
+		System.out.println("\nDoublePredicat");
+		DoublePredicate doublePredicate = (d) -> {
 
-			valid.apply(2300, 2300);
+			if (d != 0)
+				System.out.println(d);
+			else
+				System.err.println("0");
 
-			System.out.println("\nDoublePredicat");
-			DoublePredicate doublePredicate = (d) -> {
+			return false;
+		};
 
-				if (d != 0)
-					System.out.println(d);
-				else
-					System.err.println("0");
-
-				return false;
-			};
-
-			doublePredicate.test(23000);
-		}
+		doublePredicate.test(23000);
+	}
 
 }
