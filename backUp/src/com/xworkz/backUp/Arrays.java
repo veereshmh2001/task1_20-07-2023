@@ -1,6 +1,8 @@
 package com.xworkz.backUp;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
+import java.util.Set;
 
 public class Arrays {
 	
@@ -28,6 +30,18 @@ public class Arrays {
 		}
 		
 		System.out.println(ref.equals(ref));
+		
+		ListIterator<String> itr= ref.listIterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+		System.out.println("//////");
+		
+		while(itr.hasPrevious()) {
+			System.out.println(itr.previous());
+		}
+		
+		 
 	}
 
 }
