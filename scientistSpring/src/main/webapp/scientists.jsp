@@ -60,7 +60,6 @@ aria-current="page" href="index.jsp">Home</a></li>
 </nav>
 
 <body>
-<h1 style='color:green;'>${msg}</h1>
 <span style="color: red;">
 <c:forEach var = "objectErrors" items="${errors}">
         ${objectErrors.defaultMessage}</br>
